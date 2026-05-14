@@ -1,0 +1,46 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+google-services.json
+service-account*.json
+
+# Android/Gradle outputs
+app/build/
+**/build/
+
+# Python/server local files
+server_implementation/.env
+server_implementation/__pycache__/
+server_implementation/venv/
+server_implementation/.venv/
+server_implementation/uploads/
+server_implementation/output/
+server_implementation/bateradev_uploads/
+server_implementation/bateradev_output/
+server_implementation/4.35.0
+
+# OS/editor noise
+Thumbs.db
+.idea/
