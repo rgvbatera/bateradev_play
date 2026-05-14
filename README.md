@@ -1,6 +1,6 @@
 # Batera Dev Play
 
-Batera Dev Play e um app Android para bateristas estudarem, organizarem repertorio e praticarem com apoio de ferramentas de audio. O aplicativo reune download de referencias, separacao de stems, geracao musical assistida por IA, organizacao de setlists, gerenciamento de arquivos e uma tela de pratica pensada para estudo musical.
+Batera Dev Play is an Android app for drummers to study, organize repertoire, and practice with audio-focused tools. The app brings together reference downloads, stem separation, AI-assisted music generation, setlist organization, file management, and a practice screen designed for music study.
 
 ## Screenshots
 
@@ -16,43 +16,43 @@ Batera Dev Play e um app Android para bateristas estudarem, organizarem repertor
   <img src="image/photo_6_2026-05-13_22-29-13.jpg" width="220" alt="Batera Dev Play screenshot 6" />
 </p>
 
-## Recursos
+## Features
 
-- Download de audio a partir de links para criar material de estudo.
-- Separacao de stems para isolar ou remover partes da musica, com foco em bateria.
-- Geracao de musica e backing tracks com IA por meio de backend externo.
-- Tela de pratica com controles voltados para estudo musical.
-- Organizacao de musicas em setlists.
-- Gerenciamento de arquivos baixados e processados.
-- Analise de audio para apoiar estudo de tempo, estrutura e execucao.
+- Download audio from links to create study material.
+- Separate stems to isolate or remove parts of a track, with a focus on drums.
+- Generate music and backing tracks with AI through an external backend.
+- Practice screen with controls designed for music study.
+- Organize songs into setlists.
+- Manage downloaded and processed files.
+- Analyze audio to support tempo, structure, and performance study.
 
-## Como Funciona
+## How It Works
 
-O app Android e a interface principal. Algumas funcionalidades, como download, separacao de stems, analise de audio e geracao com IA, dependem de uma API backend configurada separadamente.
+The Android app is the main interface. Some features, such as downloads, stem separation, audio analysis, and AI generation, depend on a separately configured backend API.
 
-O repositorio publico nao inclui o servidor, credenciais, tokens ou configuracoes privadas. A URL do backend deve ser informada no build por meio da propriedade `BACKEND_BASE_URL`.
+This public repository does not include the server, credentials, tokens, or private configuration. The backend URL must be provided at build time through the `BACKEND_BASE_URL` property.
 
-## Configuracao do Backend
+## Backend Configuration
 
-Para rodar no emulador Android usando um backend local na maquina host:
+To run on the Android emulator using a local backend on the host machine:
 
 ```powershell
 .\gradlew assembleDebug -PBACKEND_BASE_URL=http://10.0.2.2:5000
 ```
 
-Para rodar em um dispositivo fisico, use o endereco do servidor acessivel pela rede:
+To run on a physical device, use the address of a server reachable from the device network:
 
 ```powershell
-.\gradlew assembleDebug -PBACKEND_BASE_URL=http://SEU_SERVIDOR:5000
+.\gradlew assembleDebug -PBACKEND_BASE_URL=http://YOUR_SERVER:5000
 ```
 
-Tambem existe um arquivo `.env.example` com o nome da variavel esperada:
+The `.env.example` file documents the expected variable:
 
 ```env
 BACKEND_BASE_URL=http://10.0.2.2:5000
 ```
 
-## Tecnologias
+## Tech Stack
 
 - Kotlin
 - Android Jetpack Compose
@@ -65,19 +65,19 @@ BACKEND_BASE_URL=http://10.0.2.2:5000
 - Media3 ExoPlayer
 - Gradle Kotlin DSL
 
-## Estrutura Principal
+## Project Structure
 
 ```text
 app/
   src/main/java/com/example/bateradev_play/
-    audio/          motores de audio e metronomo
-    data/           modelos, repositorios e servicos de API
-    services/       servicos Android
-    ui/             telas, navegacao, tema e viewmodels
-image/              screenshots do app
-gradle/             configuracao do wrapper e versoes
+    audio/          audio engines and metronome
+    data/           models, repositories, and API services
+    services/       Android services
+    ui/             screens, navigation, theme, and viewmodels
+image/              app screenshots
+gradle/             wrapper and version configuration
 ```
 
-## Observacao
+## Note
 
-Este repositorio contem apenas o app Android. O backend deve ser implementado, hospedado e configurado separadamente conforme a necessidade do ambiente.
+This repository contains only the Android app. The backend must be implemented, hosted, and configured separately according to the target environment.
